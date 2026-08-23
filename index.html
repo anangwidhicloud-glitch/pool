@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anti-Gravity Pools | Kontraktor Kolam Renang Mewah & Rekayasa Akuatik</title>
+  <meta name="description" content="Kontraktor & rekayasa kolam renang luxury terpercaya di Indonesia. Spesialis infinity pool, kolam resort & villa, smart IoT automation, dan renovasi presisi tinggi.">
+  <meta name="keywords" content="kontraktor kolam renang, pembuatan kolam renang mewah, infinity pool bali, kolam resort indonesia, renovasi kolam renang, smart pool">
+  <meta property="og:title" content="Anti-Gravity Pools | Kolam Renang Luxury Indonesia">
+  <meta property="og:description" content="Dari konsep hingga selesai — kami wujudkan kolam renang impian Anda.">
+  <meta property="og:image" content="assets/hero_main.jpg">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Playfair Display + Outfit + Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CANVAS BACKGROUND
+════════════════════════════════════════════════════════════ -->
+<canvas id="agCanvas"></canvas>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════════════ -->
+<header id="siteHeader">
+  <div class="nav-inner">
+
+    <!-- Logo -->
+    <a href="#home" class="nav-logo">
+      <div class="nav-logo-icon">
+        <div class="nav-logo-icon-inner">
+          <i class="fa-solid fa-water" style="color:#00E5FF;font-size:1.05rem;"></i>
+        </div>
+      </div>
+      <div class="nav-logo-text">
+        <span class="nav-logo-title">ANTI-GRAVITY <span style="color:#00E5FF;font-weight:300;">POOLS</span></span>
+        <span class="nav-logo-sub">Aquatic Engineering</span>
+      </div>
+    </a>
+
+    <!-- Desktop Pills -->
+    <nav class="nav-pills" aria-label="Navigasi utama">
+      <a href="#home"      class="nav-pill active">Home</a>
+      <a href="#services"  class="nav-pill">Layanan</a>
+      <a href="#process"   class="nav-pill">Proses</a>
+      <a href="#portfolio" class="nav-pill">Portfolio</a>
+      <a href="#estimator" class="nav-pill">Estimator</a>
+      <a href="#faq"       class="nav-pill">FAQ</a>
+      <a href="#contact"   class="nav-pill">Kontak</a>
+    </nav>
+
+    <!-- CTA + Hamburger -->
+    <div style="display:flex;align-items:center;gap:1rem;">
+      <a href="#contact" class="nav-cta" id="navCtaDesktop">
+        <i class="fa-solid fa-arrow-right-long"></i>
+        KONSULTASI GRATIS
+      </a>
+      <button class="nav-hamburger" id="navToggle" aria-label="Buka menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<button class="drawer-close" id="drawerClose" aria-label="Tutup menu"><i class="fa-solid fa-xmark"></i></button>
+<nav id="mobileDrawer" aria-label="Navigasi mobile">
+  <a href="#home"      class="drawer-link"><i class="fa-solid fa-house"></i> Home</a>
+  <a href="#services"  class="drawer-link"><i class="fa-solid fa-layer-group"></i> Layanan Kami</a>
+  <a href="#process"   class="drawer-link"><i class="fa-solid fa-timeline"></i> Proses Pengerjaan</a>
+  <a href="#portfolio" class="drawer-link"><i class="fa-solid fa-images"></i> Portfolio</a>
+  <a href="#estimator" class="drawer-link"><i class="fa-solid fa-calculator"></i> Estimator Biaya</a>
+  <a href="#faq"       class="drawer-link"><i class="fa-regular fa-circle-question"></i> FAQ</a>
+  <a href="#contact"   class="drawer-link"><i class="fa-solid fa-paper-plane"></i> Kontak</a>
+  <a href="https://wa.me/6281299887766" target="_blank" class="nav-cta" style="margin-top:1rem;justify-content:center;">
+    <i class="fa-brands fa-whatsapp"></i> WhatsApp Sekarang
+  </a>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════════ -->
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-inner" style="position:relative;z-index:2;">
+
+    <!-- Left: Copy -->
+    <div data-aos="fade-right" data-aos-duration="900">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        Terpercaya Sejak 2011 · 450+ Proyek Selesai
+      </div>
+
+      <h1 class="hero-title">
+        Wujudkan Kolam Renang<br>
+        <em class="grad-cyan" style="font-style:italic;">Impian Anda</em><br>
+        Bersama Kami
+      </h1>
+
+      <p class="hero-subtitle">
+        Dari desain 3D eksklusif hingga konstruksi presisi — kami membangun infinity pool, kolam kaca, dan sistem otomasi cerdas yang menjadi kebanggaan hunian dan resort Anda.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#portfolio" class="btn-primary">
+          <i class="fa-solid fa-images"></i>
+          Lihat Portfolio
+        </a>
+        <a href="#estimator" class="btn-secondary">
+          <i class="fa-solid fa-calculator"></i>
+          Hitung Estimasi
+        </a>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num" data-count="450" data-suffix="+">0</div>
+          <div class="hero-stat-lbl">Proyek Selesai</div>
+        </div>
+        <div>
+          <div class="hero-stat-num" data-count="15" data-suffix=" Tahun">0</div>
+          <div class="hero-stat-lbl">Pengalaman</div>
+        </div>
+        <div>
+          <div class="hero-stat-num" data-count="99" data-suffix="%">0</div>
+          <div class="hero-stat-lbl">Kepuasan Klien</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Before/After Widget -->
+    <div data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+      <div class="ba-card">
+        <div class="ba-card-header">
+          <span class="ba-card-title">Transformasi Nyata</span>
+          <span class="ba-hint"><i class="fa-solid fa-hand-pointer"></i> Geser untuk bandingkan</span>
+        </div>
+
+        <div class="ba-wrap">
+          <div class="ba-img-before" style="background-image:url('assets/before_renovation.jpg')">
+            <span class="ba-tag before-tag">SEBELUM</span>
+          </div>
+          <div class="ba-img-after" style="background-image:url('assets/after_renovation.jpg')">
+            <span class="ba-tag after-tag">SESUDAH</span>
+          </div>
+          <div class="ba-handle" style="left:50%;">
+            <div class="ba-handle-btn"><i class="fa-solid fa-left-right" style="font-size:0.8rem;"></i></div>
+          </div>
+        </div>
+
+        <div class="ba-card-footer">
+          <div class="ba-stat">
+            <div class="ba-stat-n" data-count="450" data-suffix="+">0</div>
+            <div class="ba-stat-l">Proyek</div>
+          </div>
+          <div class="ba-stat">
+            <div class="ba-stat-n" data-count="15" data-suffix="+">0</div>
+            <div class="ba-stat-l">Tahun</div>
+          </div>
+          <div class="ba-stat">
+            <div class="ba-stat-n" data-count="99" data-suffix="%">0</div>
+            <div class="ba-stat-l">Puas</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Badges below card -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-top:0.85rem;">
+        <div class="glass" style="border-radius:14px;padding:0.85rem 1rem;display:flex;align-items:center;gap:0.65rem;">
+          <i class="fa-solid fa-shield-halved" style="color:#00E5FF;font-size:1.1rem;"></i>
+          <div>
+            <div style="font-size:0.72rem;font-weight:800;color:#fff;font-family:'Outfit',sans-serif;">Garansi Struktur</div>
+            <div style="font-size:0.62rem;color:#7B8FAD;">15 Tahun</div>
+          </div>
+        </div>
+        <div class="glass" style="border-radius:14px;padding:0.85rem 1rem;display:flex;align-items:center;gap:0.65rem;">
+          <i class="fa-solid fa-certificate" style="color:#C9A84C;font-size:1.1rem;"></i>
+          <div>
+            <div style="font-size:0.72rem;font-weight:800;color:#fff;font-family:'Outfit',sans-serif;">ISO 9001:2015</div>
+            <div style="font-size:0.62rem;color:#7B8FAD;">Bersertifikasi</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SERVICES
+════════════════════════════════════════════════════════════ -->
+<section id="services" class="section">
+  <div class="section-inner">
+
+    <div class="section-header" data-aos="fade-up">
+      <div class="section-tag">Layanan Unggulan</div>
+      <h2 class="section-title">Solusi Kolam Renang <span class="grad-cyan">Terlengkap</span></h2>
+      <p class="section-desc">Dari kolam residensial privat hingga kompleks resort skala besar — setiap proyek dikerjakan oleh tim insinyur berpengalaman dengan standar tertinggi.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Card 1 -->
+      <div class="service-card glass" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-card-img-wrap">
+          <img src="assets/service_residential.jpg" alt="Kolam Renang Residensial" class="service-img" loading="lazy">
+          <div class="service-img-overlay"></div>
+          <span class="service-badge"><i class="fa-solid fa-star" style="font-size:0.6rem;"></i> Terpopuler</span>
+        </div>
+        <div class="service-card-body">
+          <div class="service-num">01 / Residensial</div>
+          <h3 class="service-title">Kolam Renang Rumah & Villa</h3>
+          <p class="service-desc">Desain dan pembangunan kolam renang privat mewah — infinity edge, skimmer, plunge pool, maupun natural pool sesuai selera dan lahan Anda.</p>
+          <div class="service-footer">
+            <a href="#contact" class="service-link">Konsultasi <i class="fa-solid fa-arrow-right-long"></i></a>
+            <span style="font-size:0.7rem;color:#7B8FAD;font-family:'Outfit',sans-serif;">Mulai 150 Jt</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="service-card glass" data-aos="fade-up" data-aos-delay="80">
+        <div class="service-card-img-wrap">
+          <img src="assets/service_commercial.jpg" alt="Kolam Resort Komersial" class="service-img" loading="lazy">
+          <div class="service-img-overlay"></div>
+          <span class="service-badge">Skala Besar</span>
+        </div>
+        <div class="service-card-body">
+          <div class="service-num">02 / Komersial</div>
+          <h3 class="service-title">Resort, Hotel & Kompleks</h3>
+          <p class="service-desc">Instalasi kolam renang komersial 5 bintang: lagoon pool, swim-up bar, lazy river, dan sistem sirkulasi kapasitas tinggi berstandar internasional.</p>
+          <div class="service-footer">
+            <a href="#contact" class="service-link">Konsultasi <i class="fa-solid fa-arrow-right-long"></i></a>
+            <span style="font-size:0.7rem;color:#7B8FAD;font-family:'Outfit',sans-serif;">Custom Budget</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="service-card glass" data-aos="fade-up" data-aos-delay="160">
+        <div class="service-card-img-wrap">
+          <img src="assets/service_smart.jpg" alt="Smart Pool IoT" class="service-img" loading="lazy">
+          <div class="service-img-overlay"></div>
+          <span class="service-badge"><i class="fa-solid fa-bolt" style="font-size:0.6rem;"></i> Teknologi</span>
+        </div>
+        <div class="service-card-body">
+          <div class="service-num">03 / Otomasi</div>
+          <h3 class="service-title">Smart Pool & IoT Automation</h3>
+          <p class="service-desc">Kendali penuh dari smartphone: pompa inverter hemat energi, filtrasi ozon/UV, pemantauan pH & klorin real-time, pencahayaan LED RGB programmable.</p>
+          <div class="service-footer">
+            <a href="#contact" class="service-link">Konsultasi <i class="fa-solid fa-arrow-right-long"></i></a>
+            <span style="font-size:0.7rem;color:#7B8FAD;font-family:'Outfit',sans-serif;">Upgrade Existing</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="service-card glass" data-aos="fade-up" data-aos-delay="240">
+        <div class="service-card-img-wrap">
+          <img src="assets/service_maintenance.jpg" alt="Perawatan Kolam Renang" class="service-img" loading="lazy">
+          <div class="service-img-overlay"></div>
+          <span class="service-badge">Berlangganan</span>
+        </div>
+        <div class="service-card-body">
+          <div class="service-num">04 / Perawatan</div>
+          <h3 class="service-title">Maintenance & Renovasi</h3>
+          <p class="service-desc">Program perawatan berkala: pembersihan robotik, balancing kimia air, pemeriksaan pompa & filter, waterproofing ulang, dan renovasi total kolam lama.</p>
+          <div class="service-footer">
+            <a href="#contact" class="service-link">Konsultasi <i class="fa-solid fa-arrow-right-long"></i></a>
+            <span style="font-size:0.7rem;color:#7B8FAD;font-family:'Outfit',sans-serif;">Mulai 2 Jt/bln</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PROCESS TIMELINE
+════════════════════════════════════════════════════════════ -->
+<section id="process" class="section section-alt">
+  <div class="section-inner">
+
+    <div class="section-header" style="text-align:center;" data-aos="fade-up">
+      <div class="section-tag" style="justify-content:center;">Cara Kerja Kami</div>
+      <h2 class="section-title">Proses <span class="grad-cyan">Transparan & Terstruktur</span></h2>
+      <p class="section-desc" style="margin:0 auto;">Setiap proyek kami jalankan dengan metodologi yang terukur agar hasil sesuai ekspektasi dan tepat waktu.</p>
+    </div>
+
+    <!-- Process image -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;margin-bottom:4rem;" data-aos="fade-up">
+      <div>
+        <img src="assets/process_design.jpg" alt="Proses Desain" style="width:100%;height:280px;object-fit:cover;border-radius:20px;border:1px solid rgba(0,229,255,0.15);" loading="lazy">
+      </div>
+      <div>
+        <img src="assets/process_construction.jpg" alt="Proses Konstruksi" style="width:100%;height:280px;object-fit:cover;border-radius:20px;border:1px solid rgba(0,229,255,0.15);" loading="lazy">
+      </div>
+    </div>
+
+    <div class="process-grid" data-aos="fade-up">
+
+      <div class="process-step">
+        <div class="process-step-num"><i class="fa-solid fa-phone process-step-icon"></i></div>
+        <h4 class="process-step-title">Konsultasi Awal</h4>
+        <p class="process-step-desc">Survey lokasi gratis, diskusi kebutuhan, anggaran, dan visi desain Anda.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="process-step-num"><i class="fa-solid fa-drafting-compass process-step-icon"></i></div>
+        <h4 class="process-step-title">Desain & 3D Render</h4>
+        <p class="process-step-desc">Pembuatan gambar desain arsitektur, denah, tampak, potongan, dan visualisasi 3D realistis.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="process-step-num"><i class="fa-solid fa-file-contract process-step-icon"></i></div>
+        <h4 class="process-step-title">RAB & Kontrak</h4>
+        <p class="process-step-desc">Rincian anggaran biaya terperinci dan penandatanganan kontrak dengan garansi jelas.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="process-step-num"><i class="fa-solid fa-hard-hat process-step-icon"></i></div>
+        <h4 class="process-step-title">Konstruksi</h4>
+        <p class="process-step-desc">Pengerjaan oleh tim terlatih dengan material premium dan pengawasan kualitas ketat.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="process-step-num"><i class="fa-solid fa-droplet process-step-icon"></i></div>
+        <h4 class="process-step-title">Pengisian & Uji Coba</h4>
+        <p class="process-step-desc">Pengisian air, kalibrasi sistem filtrasi, uji kebocoran, dan penyesuaian kimia awal.</p>
+      </div>
+
+      <div class="process-step">
+        <div class="process-step-num"><i class="fa-solid fa-handshake process-step-icon"></i></div>
+        <h4 class="process-step-title">Serah Terima</h4>
+        <p class="process-step-desc">Serah terima dengan dokumentasi lengkap, pelatihan penggunaan, dan mulai garansi resmi.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     PORTFOLIO
+════════════════════════════════════════════════════════════ -->
+<section id="portfolio" class="section">
+  <div class="section-inner">
+
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:2rem;margin-bottom:2rem;" data-aos="fade-up">
+      <div class="section-header" style="margin-bottom:0;">
+        <div class="section-tag">Karya Terbaik</div>
+        <h2 class="section-title">Portfolio <span class="grad-cyan">Proyek</span></h2>
+      </div>
+      <div class="portfolio-filters">
+        <button class="pf-btn active" data-filter="all">Semua</button>
+        <button class="pf-btn" data-filter="infinity">Infinity Pool</button>
+        <button class="pf-btn" data-filter="villa">Villa & Residensial</button>
+        <button class="pf-btn" data-filter="resort">Resort & Hotel</button>
+      </div>
+    </div>
+
+    <div class="portfolio-grid">
+
+      <div class="portfolio-item" data-cat="infinity" data-aos="fade-up" data-aos-delay="0">
+        <div class="portfolio-img-wrap">
+          <img src="assets/hero_main.jpg" alt="Infinity Pool Bali" class="portfolio-img" loading="lazy">
+          <div class="portfolio-overlay">
+            <div class="portfolio-location"><i class="fa-solid fa-location-dot"></i> Ubud, Bali</div>
+            <div class="portfolio-name p-title">Sawah View Infinity Pool</div>
+            <div class="portfolio-cat p-desc">Infinity pool 14m di tepi sawah terasering dengan pemandangan Gunung Agung.</div>
+          </div>
+          <div class="portfolio-view"><i class="fa-solid fa-expand"></i></div>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-cat="villa" data-aos="fade-up" data-aos-delay="80">
+        <div class="portfolio-img-wrap">
+          <img src="assets/portfolio_villa_bali.jpg" alt="Villa Bali" class="portfolio-img" loading="lazy">
+          <div class="portfolio-overlay">
+            <div class="portfolio-location"><i class="fa-solid fa-location-dot"></i> Seminyak, Bali</div>
+            <div class="portfolio-name p-title">Frangipani Villa Pool</div>
+            <div class="portfolio-cat p-desc">Kolam renang privat mosaic biru 12x4m dengan taman tropis dan bale-bale kayu jati.</div>
+          </div>
+          <div class="portfolio-view"><i class="fa-solid fa-expand"></i></div>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-cat="resort" data-aos="fade-up" data-aos-delay="160">
+        <div class="portfolio-img-wrap">
+          <img src="assets/portfolio_resort.jpg" alt="Resort Pool" class="portfolio-img" loading="lazy">
+          <div class="portfolio-overlay">
+            <div class="portfolio-location"><i class="fa-solid fa-location-dot"></i> Lombok</div>
+            <div class="portfolio-name p-title">Azure Resort Lagoon</div>
+            <div class="portfolio-cat p-desc">Kolam resort tepi pantai 800m² dengan gazebo, swim-up bar, dan panorama laut tak terbatas.</div>
+          </div>
+          <div class="portfolio-view"><i class="fa-solid fa-expand"></i></div>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-cat="infinity" data-aos="fade-up" data-aos-delay="0">
+        <div class="portfolio-img-wrap">
+          <img src="assets/portfolio_rooftop.jpg" alt="Rooftop Pool Jakarta" class="portfolio-img" loading="lazy">
+          <div class="portfolio-overlay">
+            <div class="portfolio-location"><i class="fa-solid fa-location-dot"></i> SCBD, Jakarta</div>
+            <div class="portfolio-name p-title">Skyline Rooftop Infinity</div>
+            <div class="portfolio-cat p-desc">Infinity pool atap gedung 32 lantai dengan panorama 360° kota Jakarta saat golden hour.</div>
+          </div>
+          <div class="portfolio-view"><i class="fa-solid fa-expand"></i></div>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-cat="villa" data-aos="fade-up" data-aos-delay="80">
+        <div class="portfolio-img-wrap">
+          <img src="assets/after_renovation.jpg" alt="Pool After Renovation" class="portfolio-img" loading="lazy">
+          <div class="portfolio-overlay">
+            <div class="portfolio-location"><i class="fa-solid fa-location-dot"></i> Bandung</div>
+            <div class="portfolio-name p-title">Hillside Retreat Pool</div>
+            <div class="portfolio-cat p-desc">Renovasi total kolam lama menjadi infinity pool cantilever modern dengan view pegunungan.</div>
+          </div>
+          <div class="portfolio-view"><i class="fa-solid fa-expand"></i></div>
+        </div>
+      </div>
+
+      <div class="portfolio-item" data-cat="resort" data-aos="fade-up" data-aos-delay="160">
+        <div class="portfolio-img-wrap">
+          <img src="assets/service_commercial.jpg" alt="Commercial Resort" class="portfolio-img" loading="lazy">
+          <div class="portfolio-overlay">
+            <div class="portfolio-location"><i class="fa-solid fa-location-dot"></i> Nusa Dua, Bali</div>
+            <div class="portfolio-name p-title">The Grand Lagoon Complex</div>
+            <div class="portfolio-cat p-desc">Kompleks kolam resort 1.200m² — lazy river, jacuzzi, slide pool untuk keluarga & tamu VIP.</div>
+          </div>
+          <div class="portfolio-view"><i class="fa-solid fa-expand"></i></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TESTIMONIALS
+════════════════════════════════════════════════════════════ -->
+<section id="testimonials" class="section section-alt">
+  <div class="section-inner">
+
+    <div class="section-header" style="text-align:center;" data-aos="fade-up">
+      <div class="section-tag" style="justify-content:center;">Kata Klien Kami</div>
+      <h2 class="section-title">Dipercaya oleh <span class="grad-cyan">Ratusan Klien</span></h2>
+    </div>
+
+    <div class="testi-grid">
+
+      <div class="testi-card glass" data-aos="fade-up" data-aos-delay="0">
+        <div class="testi-stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testi-text">Kolam renang di villa kami di Seminyak dikerjakan dengan sangat profesional. Hasil akhirnya melampaui ekspektasi — setiap tamu selalu kagum melihatnya. Tim Anti-Gravity Pools benar-benar mengerti estetika dan teknik.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">DR</div>
+          <div>
+            <div class="testi-name">Dian Rahayu</div>
+            <div class="testi-loc"><i class="fa-solid fa-location-dot" style="font-size:0.65rem;color:#00E5FF;"></i> Villa Owner, Seminyak Bali</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card glass" data-aos="fade-up" data-aos-delay="100">
+        <div class="testi-stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testi-text">Kami mempercayakan pembangunan 3 kolam resort kepada Anti-Gravity Pools. Eksekusinya sangat rapi, on-schedule, dan sistem smart pool-nya benar-benar memangkas biaya operasional kami hingga 35%.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">BP</div>
+          <div>
+            <div class="testi-name">Budi Pratama</div>
+            <div class="testi-loc"><i class="fa-solid fa-location-dot" style="font-size:0.65rem;color:#00E5FF;"></i> GM Azure Resort, Lombok</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testi-card glass" data-aos="fade-up" data-aos-delay="200">
+        <div class="testi-stars">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testi-text">Renovasi kolam rooftop apartemen kami di Jakarta berjalan sangat mulus. Anti-Gravity Pools memberikan solusi teknis yang inovatif untuk tantangan konstruksi di ketinggian. Hasil akhirnya luar biasa.</p>
+        <div class="testi-author">
+          <div class="testi-avatar">AS</div>
+          <div>
+            <div class="testi-name">Arief Santoso</div>
+            <div class="testi-loc"><i class="fa-solid fa-location-dot" style="font-size:0.65rem;color:#00E5FF;"></i> Property Developer, Jakarta</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ESTIMATOR
+════════════════════════════════════════════════════════════ -->
+<section id="estimator" class="section">
+  <div class="section-inner">
+
+    <div class="section-header" style="text-align:center;" data-aos="fade-up">
+      <div class="section-tag" style="justify-content:center;">Kalkulasi Biaya</div>
+      <h2 class="section-title">Estimator Kolam Renang <span class="grad-cyan">Interaktif</span></h2>
+      <p class="section-desc" style="margin:0 auto;">Atur dimensi dan fitur, dapatkan perkiraan investasi secara instan.</p>
+    </div>
+
+    <div class="glass" style="border-radius:24px;padding:3rem;margin-top:3rem;" data-aos="fade-up">
+      <div class="estimator-wrap">
+
+        <!-- Left: Inputs -->
+        <div style="display:flex;flex-direction:column;gap:1.5rem;">
+
+          <div>
+            <label class="est-label" for="eType">Tipe Kolam Renang</label>
+            <select id="eType" class="est-select">
+              <option value="1.0">Skimmer Pool — Standar Modern</option>
+              <option value="1.3" selected>Infinity Edge Pool — Luxury</option>
+              <option value="1.6">Natural / Bio Pool — Premium Eco</option>
+              <option value="2.0">Glass / Acrylic Pool — Eksklusif</option>
+            </select>
+          </div>
+
+          <div class="slider-row">
+            <div class="slider-header">
+              <label class="est-label" for="eLen">Panjang Kolam</label>
+              <span class="slider-val" id="lenVal">10m</span>
+            </div>
+            <input type="range" id="eLen" min="4" max="30" value="10" step="1">
+          </div>
+
+          <div class="slider-row">
+            <div class="slider-header">
+              <label class="est-label" for="eWid">Lebar Kolam</label>
+              <span class="slider-val" id="widVal">5m</span>
+            </div>
+            <input type="range" id="eWid" min="2" max="15" value="5" step="0.5">
+          </div>
+
+          <div class="slider-row">
+            <div class="slider-header">
+              <label class="est-label" for="eDep">Kedalaman Rata-rata</label>
+              <span class="slider-val" id="depVal">1.4m</span>
+            </div>
+            <input type="range" id="eDep" min="0.8" max="2.5" value="1.4" step="0.1">
+          </div>
+
+        </div>
+
+        <!-- Right: Features + Result -->
+        <div style="display:flex;flex-direction:column;gap:1.25rem;">
+
+          <div>
+            <div class="est-label" style="margin-bottom:0.85rem;">Fitur Tambahan</div>
+            <div class="est-checkbox-grid">
+              <label class="est-feature-row">
+                <div style="display:flex;align-items:center;gap:0.65rem;">
+                  <input type="checkbox" class="est-cb" value="45000000" checked>
+                  <div>
+                    <div class="est-feature-name">Smart IoT Automation + Ozon UV</div>
+                    <div style="font-size:0.68rem;color:#7B8FAD;">Kontrol dari smartphone</div>
+                  </div>
+                </div>
+                <span class="est-feature-price">+ Rp 45 Jt</span>
+              </label>
+              <label class="est-feature-row">
+                <div style="display:flex;align-items:center;gap:0.65rem;">
+                  <input type="checkbox" class="est-cb" value="75000000">
+                  <div>
+                    <div class="est-feature-name">Dinding Kaca / Acrylic Panel</div>
+                    <div style="font-size:0.68rem;color:#7B8FAD;">Transparansi penuh bawah air</div>
+                  </div>
+                </div>
+                <span class="est-feature-price">+ Rp 75 Jt</span>
+              </label>
+              <label class="est-feature-row">
+                <div style="display:flex;align-items:center;gap:0.65rem;">
+                  <input type="checkbox" class="est-cb" value="35000000">
+                  <div>
+                    <div class="est-feature-name">Heat Pump Inverter (Pemanas Air)</div>
+                    <div style="font-size:0.68rem;color:#7B8FAD;">Nyaman sepanjang musim</div>
+                  </div>
+                </div>
+                <span class="est-feature-price">+ Rp 35 Jt</span>
+              </label>
+              <label class="est-feature-row">
+                <div style="display:flex;align-items:center;gap:0.65rem;">
+                  <input type="checkbox" class="est-cb" value="28000000">
+                  <div>
+                    <div class="est-feature-name">LED Underwater Lighting RGB</div>
+                    <div style="font-size:0.68rem;color:#7B8FAD;">Programmable multi-warna</div>
+                  </div>
+                </div>
+                <span class="est-feature-price">+ Rp 28 Jt</span>
+              </label>
+              <label class="est-feature-row">
+                <div style="display:flex;align-items:center;gap:0.65rem;">
+                  <input type="checkbox" class="est-cb" value="55000000">
+                  <div>
+                    <div class="est-feature-name">Pool Deck Batu Alam Premium</div>
+                    <div style="font-size:0.68rem;color:#7B8FAD;">Andesit, marmer, atau travertin</div>
+                  </div>
+                </div>
+                <span class="est-feature-price">+ Rp 55 Jt</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="est-result">
+            <div class="est-result-label">Perkiraan Total Investasi</div>
+            <div class="est-result-price grad-cyan" id="eResult">Rp 0</div>
+            <div class="est-result-note">*Estimasi awal. Harga final ditentukan setelah survey & RAB lengkap.</div>
+            <a href="#contact" class="btn-primary" style="display:inline-flex;font-size:0.78rem;">
+              <i class="fa-brands fa-whatsapp"></i>
+              Diskusikan Estimasi Ini
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FAQ
+════════════════════════════════════════════════════════════ -->
+<section id="faq" class="section section-alt">
+  <div class="section-inner" style="max-width:860px;">
+
+    <div class="section-header" style="text-align:center;" data-aos="fade-up">
+      <div class="section-tag" style="justify-content:center;">Pertanyaan Umum</div>
+      <h2 class="section-title">Yang Sering <span class="grad-cyan">Ditanyakan</span></h2>
+    </div>
+
+    <div class="faq-list" data-aos="fade-up">
+
+      <div class="faq-item glass">
+        <button class="faq-q">
+          <span class="faq-q-text">Berapa lama proses pembangunan kolam renang?</span>
+          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a">Durasi pembangunan tergantung pada ukuran dan kompleksitas proyek. Untuk kolam residensial standar (8×4m), umumnya memerlukan waktu 6–10 minggu. Proyek kolam komersial skala besar bisa memerlukan 3–6 bulan. Kami selalu memberikan timeline pengerjaan yang jelas sebelum proyek dimulai.</div>
+      </div>
+
+      <div class="faq-item glass">
+        <button class="faq-q">
+          <span class="faq-q-text">Apakah ada garansi untuk kolam yang dibangun?</span>
+          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a">Ya. Kami memberikan garansi struktur beton selama 15 tahun dan garansi kebocoran selama 5 tahun. Selain itu, semua peralatan mekanikal (pompa, filter, kontrol) mendapatkan garansi pabrik 1–3 tahun sesuai merek yang digunakan.</div>
+      </div>
+
+      <div class="faq-item glass">
+        <button class="faq-q">
+          <span class="faq-q-text">Berapa biaya minimum pembuatan kolam renang?</span>
+          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a">Biaya minimum untuk kolam renang skimmer standar (6×3m) dimulai dari sekitar Rp 150–200 juta, sudah termasuk pekerjaan struktur, finishing keramik, pompa, dan filter dasar. Untuk infinity pool, glass pool, atau kolam dengan fitur premium lainnya, biaya dapat menyesuaikan. Gunakan estimator kami untuk perkiraan awal.</div>
+      </div>
+
+      <div class="faq-item glass">
+        <button class="faq-q">
+          <span class="faq-q-text">Apakah bisa mengerjakan proyek di luar Bali dan Jakarta?</span>
+          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a">Tentu. Kami beroperasi di seluruh Indonesia, termasuk Surabaya, Bandung, Lombok, Flores, Manado, Makassar, Batam, dan kota-kota lainnya. Untuk proyek di luar area utama, kami menyertakan biaya mobilisasi tim yang akan diinformasikan di RAB.</div>
+      </div>
+
+      <div class="faq-item glass">
+        <button class="faq-q">
+          <span class="faq-q-text">Bagaimana cara merawat kolam renang agar tetap jernih?</span>
+          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a">Kunci utama: sirkulasi pompa minimal 8 jam/hari, balancing kimia air (pH 7.2–7.6, klorin 1–3 ppm) setiap 2–3 hari, dan pembersihan dinding & dasar seminggu sekali. Dengan sistem smart pool IoT kami, semua ini bisa dipantau dan dikontrol otomatis dari smartphone Anda.</div>
+      </div>
+
+      <div class="faq-item glass">
+        <button class="faq-q">
+          <span class="faq-q-text">Apakah konsultasi awal dikenakan biaya?</span>
+          <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+        </button>
+        <div class="faq-a">Konsultasi awal dan kunjungan survey lokasi kami berikan GRATIS, tanpa kewajiban apapun. Anda bisa berdiskusi langsung dengan insinyur senior kami untuk mendapatkan gambaran jelas tentang desain, anggaran, dan timeline proyek Anda.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════════════════ -->
+<section id="contact" class="section">
+  <div class="section-inner">
+
+    <div class="section-header" style="text-align:center;" data-aos="fade-up">
+      <div class="section-tag" style="justify-content:center;">Mulai Proyek Anda</div>
+      <h2 class="section-title">Hubungi <span class="grad-cyan">Tim Ahli Kami</span></h2>
+      <p class="section-desc" style="margin:0 auto;">Konsultasi gratis, survey lokasi, dan estimasi awal — tanpa biaya dan tanpa kewajiban.</p>
+    </div>
+
+    <div class="contact-grid" style="margin-top:3rem;" data-aos="fade-up">
+
+      <!-- Form -->
+      <div class="glass" style="border-radius:24px;padding:2.5rem;">
+        <h3 style="font-family:'Outfit',sans-serif;font-size:1.2rem;font-weight:800;color:#fff;margin-bottom:1.75rem;">Kirim Pesan</h3>
+        <form id="contactForm" onsubmit="handleContact(event)" style="display:flex;flex-direction:column;gap:1.25rem;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+            <div class="form-group">
+              <label class="form-label" for="fName">Nama Lengkap</label>
+              <input type="text" id="fName" class="form-input" placeholder="Bpk/Ibu ..." required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="fPhone">No. WhatsApp</label>
+              <input type="tel" id="fPhone" class="form-input" placeholder="08xx-xxxx-xxxx" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="fLocation">Lokasi Proyek</label>
+            <input type="text" id="fLocation" class="form-input" placeholder="Kota / Kabupaten...">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="fService">Layanan yang Diinginkan</label>
+            <select id="fService" class="form-input">
+              <option value="">— Pilih Layanan —</option>
+              <option>Pembuatan Kolam Baru (Residensial)</option>
+              <option>Proyek Komersial (Resort/Hotel)</option>
+              <option>Renovasi & Upgrade Kolam Lama</option>
+              <option>Instalasi Smart Pool IoT</option>
+              <option>Program Perawatan Berkala</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="fMsg">Pesan & Keterangan</label>
+            <textarea id="fMsg" class="form-input" rows="4" placeholder="Ceritakan kebutuhan kolam renang Anda..."></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="justify-content:center;">
+            <i class="fa-brands fa-whatsapp" style="font-size:1rem;"></i>
+            Kirim via WhatsApp
+          </button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div style="display:flex;flex-direction:column;gap:2rem;">
+
+        <div class="glass-gold" style="border-radius:20px;padding:2rem;">
+          <h3 style="font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:1.5rem;">Informasi Kontak</h3>
+          <div class="contact-info">
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fa-brands fa-whatsapp"></i></div>
+              <div>
+                <div class="contact-info-label">WhatsApp</div>
+                <a href="https://wa.me/6281299887766" class="contact-info-val" style="color:#fff;">+62 812-9988-7766</a>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <div class="contact-info-label">Email</div>
+                <div class="contact-info-val">info@antigravitypools.id</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <div class="contact-info-label">Kantor Jakarta</div>
+                <div class="contact-info-val" style="font-size:0.85rem;">Senopati Tower Lt.18<br>Jakarta Selatan 12190</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <div class="contact-info-label">Kantor Bali</div>
+                <div class="contact-info-val" style="font-size:0.85rem;">Jl. Sunset Road No.88<br>Seminyak, Badung 80361</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon"><i class="fa-solid fa-clock"></i></div>
+              <div>
+                <div class="contact-info-label">Jam Operasional</div>
+                <div class="contact-info-val" style="font-size:0.85rem;">Senin – Sabtu: 08.00 – 17.00 WIB</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trust Badges -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div class="glass" style="border-radius:16px;padding:1.25rem;text-align:center;">
+            <i class="fa-solid fa-award" style="color:#C9A84C;font-size:1.5rem;margin-bottom:0.5rem;"></i>
+            <div style="font-family:'Outfit',sans-serif;font-size:0.75rem;font-weight:800;color:#fff;">ISO 9001:2015</div>
+            <div style="font-size:0.65rem;color:#7B8FAD;margin-top:2px;">Certified</div>
+          </div>
+          <div class="glass" style="border-radius:16px;padding:1.25rem;text-align:center;">
+            <i class="fa-solid fa-shield-halved" style="color:#00E5FF;font-size:1.5rem;margin-bottom:0.5rem;"></i>
+            <div style="font-family:'Outfit',sans-serif;font-size:0.75rem;font-weight:800;color:#fff;">Garansi 15 Th</div>
+            <div style="font-size:0.65rem;color:#7B8FAD;margin-top:2px;">Struktur Beton</div>
+          </div>
+          <div class="glass" style="border-radius:16px;padding:1.25rem;text-align:center;">
+            <i class="fa-solid fa-users" style="color:#00E5FF;font-size:1.5rem;margin-bottom:0.5rem;"></i>
+            <div style="font-family:'Outfit',sans-serif;font-size:0.75rem;font-weight:800;color:#fff;">450+ Proyek</div>
+            <div style="font-size:0.65rem;color:#7B8FAD;margin-top:2px;">Selesai</div>
+          </div>
+          <div class="glass" style="border-radius:16px;padding:1.25rem;text-align:center;">
+            <i class="fa-solid fa-map-location-dot" style="color:#C9A84C;font-size:1.5rem;margin-bottom:0.5rem;"></i>
+            <div style="font-family:'Outfit',sans-serif;font-size:0.75rem;font-weight:800;color:#fff;">Se-Indonesia</div>
+            <div style="font-size:0.65rem;color:#7B8FAD;margin-top:2px;">Wilayah Layanan</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+
+    <div>
+      <a href="#home" class="nav-logo" style="margin-bottom:1.25rem;display:inline-flex;">
+        <div class="nav-logo-icon" style="width:36px;height:36px;">
+          <div class="nav-logo-icon-inner"><i class="fa-solid fa-water" style="color:#00E5FF;font-size:0.9rem;"></i></div>
+        </div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-title" style="font-size:1rem;">ANTI-GRAVITY <span style="color:#00E5FF;font-weight:300;">POOLS</span></span>
+        </div>
+      </a>
+      <p class="footer-desc">Kontraktor & rekayasa kolam renang mewah terpercaya di Indonesia. Berdiri sejak 2011 dengan lebih dari 450 proyek yang telah kami selesaikan.</p>
+      <div class="footer-socials">
+        <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" class="social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Layanan</div>
+      <nav class="footer-links">
+        <a href="#services" class="footer-link">Kolam Residensial</a>
+        <a href="#services" class="footer-link">Kolam Komersial</a>
+        <a href="#services" class="footer-link">Smart Pool IoT</a>
+        <a href="#services" class="footer-link">Renovasi Kolam</a>
+        <a href="#services" class="footer-link">Maintenance Berkala</a>
+      </nav>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Navigasi</div>
+      <nav class="footer-links">
+        <a href="#home" class="footer-link">Home</a>
+        <a href="#portfolio" class="footer-link">Portfolio</a>
+        <a href="#process" class="footer-link">Proses Kerja</a>
+        <a href="#estimator" class="footer-link">Estimator</a>
+        <a href="#faq" class="footer-link">FAQ</a>
+        <a href="#contact" class="footer-link">Kontak</a>
+      </nav>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Lokasi Kantor</div>
+      <div class="footer-links" style="gap:1rem;">
+        <div>
+          <div style="font-size:0.75rem;font-weight:700;color:#fff;margin-bottom:0.25rem;">Jakarta</div>
+          <div class="footer-link">Senopati Tower Lt.18, Jl. Senopati, Kebayoran Baru</div>
+        </div>
+        <div>
+          <div style="font-size:0.75rem;font-weight:700;color:#fff;margin-bottom:0.25rem;">Bali</div>
+          <div class="footer-link">Jl. Sunset Road No.88, Seminyak, Badung</div>
+        </div>
+        <div style="margin-top:0.5rem;">
+          <a href="tel:+6281299887766" class="footer-link" style="color:#00E5FF;display:flex;align-items:center;gap:0.4rem;"><i class="fa-solid fa-phone" style="font-size:0.75rem;"></i> +62 812-9988-7766</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2026 Anti-Gravity Pools. Hak cipta dilindungi.</span>
+    <span class="footer-copy" style="display:flex;align-items:center;gap:0.5rem;">Dibuat dengan <i class="fa-solid fa-heart" style="color:#ef4444;font-size:0.8rem;"></i> oleh tim kami</span>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════
+     LIGHTBOX
+════════════════════════════════════════════════════════════ -->
+<div id="lightbox" class="lightbox">
+  <div class="lightbox-inner">
+    <button id="lbClose" class="lightbox-close"><i class="fa-solid fa-xmark"></i></button>
+    <img id="lbImg" src="" alt="Portfolio Preview" class="lightbox-img">
+    <div class="lightbox-info">
+      <div id="lbTitle" class="lightbox-title"></div>
+      <div id="lbDesc" class="lightbox-desc"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════
+     WHATSAPP FLOATING
+════════════════════════════════════════════════════════════ -->
+<a href="https://wa.me/6281299887766?text=Halo%20Anti-Gravity%20Pools%2C%20saya%20ingin%20konsultasi%20gratis%20mengenai%20kolam%20renang." target="_blank" class="wa-float" aria-label="Hubungi via WhatsApp">
+  <span class="wa-tooltip">Konsultasi Gratis via WA</span>
+  <div class="wa-btn"><i class="fa-brands fa-whatsapp"></i></div>
+</a>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="script.js"></script>
+<script>
+  AOS.init({ once: true, duration: 750, easing: 'ease-out-cubic', offset: 80 });
+
+  function handleContact(e) {
+    e.preventDefault();
+    const name    = document.getElementById('fName').value;
+    const phone   = document.getElementById('fPhone').value;
+    const loc     = document.getElementById('fLocation').value;
+    const service = document.getElementById('fService').value;
+    const msg     = document.getElementById('fMsg').value;
+    const text = `Halo Anti-Gravity Pools! 👋%0A%0ASaya ingin konsultasi gratis.%0A%0A*Nama:* ${encodeURIComponent(name)}%0A*Telepon:* ${encodeURIComponent(phone)}%0A*Lokasi:* ${encodeURIComponent(loc || '-')}%0A*Layanan:* ${encodeURIComponent(service || '-')}%0A*Keterangan:* ${encodeURIComponent(msg || '-')}`;
+    window.open(`https://wa.me/6281299887766?text=${text}`, '_blank');
+  }
+</script>
+
+</body>
+</html>

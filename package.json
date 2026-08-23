@@ -1,0 +1,18 @@
+{
+  "name": "jasa-kolam-renang-anti-gravity",
+  "version": "1.0.0",
+  "description": "Anti-Gravity Pools Luxury Swimming Pool Engineering Website",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8080",
+    "start": "python -m http.server 8080"
+  },
+  "keywords": [
+    "swimming-pool",
+    "luxury",
+    "anti-gravity",
+    "landing-page"
+  ],
+  "author": "Anti-Gravity Pools",
+  "license": "MIT"
+}
