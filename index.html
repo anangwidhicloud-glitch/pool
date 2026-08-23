@@ -79,8 +79,14 @@
 </header>
 
 <!-- Mobile Drawer -->
-<button class="drawer-close" id="drawerClose" aria-label="Tutup menu"><i class="fa-solid fa-xmark"></i></button>
 <nav id="mobileDrawer" aria-label="Navigasi mobile">
+  <div style="position:absolute;top:1.25rem;left:1.5rem;display:flex;align-items:center;gap:0.75rem;">
+    <div class="nav-logo-icon" style="width:36px;height:36px;">
+      <div class="nav-logo-icon-inner"><i class="fa-solid fa-water" style="color:#00E5FF;font-size:0.9rem;"></i></div>
+    </div>
+    <span style="font-family:'Outfit',sans-serif;font-size:0.95rem;font-weight:900;color:#fff;letter-spacing:0.06em;">ANTI-GRAVITY</span>
+  </div>
+  <button class="drawer-close" id="drawerClose" aria-label="Tutup menu"><i class="fa-solid fa-xmark"></i></button>
   <a href="#home"      class="drawer-link"><i class="fa-solid fa-house"></i> Home</a>
   <a href="#services"  class="drawer-link"><i class="fa-solid fa-layer-group"></i> Layanan Kami</a>
   <a href="#process"   class="drawer-link"><i class="fa-solid fa-timeline"></i> Proses Pengerjaan</a>
@@ -183,7 +189,7 @@
       </div>
 
       <!-- Badges below card -->
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-top:0.85rem;">
+      <div class="hero-trust-badges">
         <div class="glass" style="border-radius:14px;padding:0.85rem 1rem;display:flex;align-items:center;gap:0.65rem;">
           <i class="fa-solid fa-shield-halved" style="color:#00E5FF;font-size:1.1rem;"></i>
           <div>
@@ -307,12 +313,12 @@
     </div>
 
     <!-- Process image -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;margin-bottom:4rem;" data-aos="fade-up">
+    <div class="process-gallery" data-aos="fade-up">
       <div>
-        <img src="assets/process_design.jpg" alt="Proses Desain" style="width:100%;height:280px;object-fit:cover;border-radius:20px;border:1px solid rgba(0,229,255,0.15);" loading="lazy">
+        <img src="assets/process_design.jpg" alt="Proses Desain" class="process-gallery-img" loading="lazy">
       </div>
       <div>
-        <img src="assets/process_construction.jpg" alt="Proses Konstruksi" style="width:100%;height:280px;object-fit:cover;border-radius:20px;border:1px solid rgba(0,229,255,0.15);" loading="lazy">
+        <img src="assets/process_construction.jpg" alt="Proses Konstruksi" class="process-gallery-img" loading="lazy">
       </div>
     </div>
 
@@ -526,7 +532,7 @@
       <p class="section-desc" style="margin:0 auto;">Atur dimensi dan fitur, dapatkan perkiraan investasi secara instan.</p>
     </div>
 
-    <div class="glass" style="border-radius:24px;padding:3rem;margin-top:3rem;" data-aos="fade-up">
+    <div class="glass estimator-container" data-aos="fade-up">
       <div class="estimator-wrap">
 
         <!-- Left: Inputs -->
@@ -724,10 +730,10 @@
     <div class="contact-grid" style="margin-top:3rem;" data-aos="fade-up">
 
       <!-- Form -->
-      <div class="glass" style="border-radius:24px;padding:2.5rem;">
+      <div class="glass contact-form-box">
         <h3 style="font-family:'Outfit',sans-serif;font-size:1.2rem;font-weight:800;color:#fff;margin-bottom:1.75rem;">Kirim Pesan</h3>
         <form id="contactForm" onsubmit="handleContact(event)" style="display:flex;flex-direction:column;gap:1.25rem;">
-          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+          <div class="form-row-2">
             <div class="form-group">
               <label class="form-label" for="fName">Nama Lengkap</label>
               <input type="text" id="fName" class="form-input" placeholder="Bpk/Ibu ..." required>
@@ -766,7 +772,7 @@
       <!-- Contact Info -->
       <div style="display:flex;flex-direction:column;gap:2rem;">
 
-        <div class="glass-gold" style="border-radius:20px;padding:2rem;">
+        <div class="glass-gold contact-info-box">
           <h3 style="font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:800;color:#fff;margin-bottom:1.5rem;">Informasi Kontak</h3>
           <div class="contact-info">
             <div class="contact-info-item">
@@ -808,7 +814,7 @@
         </div>
 
         <!-- Trust Badges -->
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+        <div class="trust-badges-grid">
           <div class="glass" style="border-radius:16px;padding:1.25rem;text-align:center;">
             <i class="fa-solid fa-award" style="color:#C9A84C;font-size:1.5rem;margin-bottom:0.5rem;"></i>
             <div style="font-family:'Outfit',sans-serif;font-size:0.75rem;font-weight:800;color:#fff;">ISO 9001:2015</div>
